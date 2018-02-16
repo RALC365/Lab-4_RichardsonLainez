@@ -1,35 +1,27 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Carro.h"
-#include "Edificio.h"
-#include "Parqueo.h"
-
-using namespace std;
-
 
 int menu();
 
 int main(){
 	int cPersonas = 0;
 	int cPisos = 0;
-	//Parqueo parqueo = NULL;	
+	Parqueo parqueo = NULL;	
 	cout<< "¡Bienvenido!"<< endl;
 	cout<< "Ahora crearemos un edificio" << endl;
 	//validacion de personas	
 	cout << "Ingrese la cantidad del personas por piso"<< endl;
 	do{
 		cin >> cPersonas;
-	}while(cPersonas < 50 || cPersonas >200 );
+	}while(cPersonas <= 0);
 
-	//validacion de pisos
+	//valdacion de pisos
 	cout << "Ingrese la cantidad del personas por piso"<< endl;
 	do{
 		cin >> cPisos;
-	}while(cPisos <= 0);
+	}while(cPersonas <= 0);
 	
-	Edificio edificio =  Edificio(cPersonas, cPisos);
-
 	int opcion = 0;
  	opcion = menu();
 

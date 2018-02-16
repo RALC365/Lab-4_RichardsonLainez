@@ -1,4 +1,5 @@
 #include <string>
+#include "Carro.h"
 
 using namespace std;
 
@@ -14,9 +15,15 @@ class Parqueo{
 		Parqueo();
 		//altura, pisos(z), x
 		Parqueo(int,int, int);
+		void crearMatriz();
+		void actualizarValores();
 		int alturaMax;
 		int pisos;
 		int personas;	
+		int m;
+		int n;
+		Carro**** parqueoTD;	
+
 	//destructor
 		~Parqueo();
 };

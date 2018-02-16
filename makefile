@@ -1,14 +1,14 @@
-main: Main.o Parqueo.o
-	g++ Main.o Parqueo.o -o "Ejecutable"
+temp: Main.o Parqueo.o Edificio.o Carro.o
+	g++ Main.o Parqueo.o Carro.o -o "temp"
 
-Main.o: Main.cpp
-	g++ -c main.cpp
+Main.o: Main.cpp Parqueo.h Edificio.h Carro.h
+	g++ -c Main.cpp
 
-Parqueo.o: Parqueo.cpp Parqueo.h
+Parqueo.o: Parqueo.h Parqueo.cpp Carro.h 
 	g++ -c Parqueo.cpp
 
-Edificio.o: Edificio.cpp Edificio.h
+Edificio.o: Edificio.h Edificio.cpp Parqueo.h
 	g++ -c Edificio.cpp
 
-Carro.o: Carro.cpp Carro.h 
+Carro.o: Carro.h Carro.cpp 
 	g++ -c Carro.cpp
