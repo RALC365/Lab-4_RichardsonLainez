@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Parqueo.cpp"
+#include "Parqueo.h"
 
 #ifndef EDIFICIO_H
 #define EDIFICIO_H
@@ -14,7 +14,7 @@ class Edificio{
 		//cPersonas, pisos
 		Edificio(int, int);
 		void  crearParqueo();
-		
+		Parqueo getParqueo();		
 		int getPersonas();
 		int getPisos();
 		int cPersonas;

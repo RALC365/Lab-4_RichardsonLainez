@@ -1,12 +1,13 @@
 #include "Edificio.h"
 #include <iostream>
-#include "Parqueo.h"
+//#include "Parqueo.h"
 
 using namespace std;
 
 Edificio::Edificio(int cPersonas2, int pPisos){
 	cPersonas = cPersonas2;
 	pisos = pPisos;
+	crearParqueo();
 }
 
 Edificio::Edificio(){
@@ -29,13 +30,13 @@ void Edificio::crearParqueo(){
 	
 	//altura max
 	do{
-		cout <<"Ingrese la altura max: " << endl;
+		cout <<"Ingrese la altura max del parqueo: " << endl;
 		cin >> alturaMax;
 	}while(alturaMax <= 0);
 
 	//pisos
 	do{
-		cout << "Ingrese la cantidad de pisos: ";
+		cout << "Ingrese la cantidad de pisos del parqueo: ";
 		cin >> pPisos;
 	}while(pPisos <= 0);
 	
@@ -44,8 +45,14 @@ void Edificio::crearParqueo(){
 
 }
 
+Parqueo Edificio::getParqueo(){
+	return parqueo;
+}
+
+
 
 //destructor
 Edificio::~Edificio(){
+	cout << "Se ha liberado la memoria";
 }
 

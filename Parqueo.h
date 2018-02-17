@@ -17,6 +17,10 @@ class Parqueo{
 		Parqueo(int,int, int);
 		void crearMatriz();
 		void actualizarValores();
+		void analizarParqueo();
+		void eliminarCarro();
+		Carro**** getMatriz();
+		void anadirCarro();
 		int alturaMax;
 		int pisos;
 		int personas;	
