@@ -51,14 +51,16 @@ void Parqueo::anadirCarro(){
 			<< endl;
 		cin >> pisoElg;
 	}while(pisoElg < 0 || pisoElg > pisos);
-	
+	//Carro *temp = new Carro(colorC, marcaC, alturaC);
 	for(int i = 0; i < pisos; i++){
 		for(int j = 0; j < n; j++){
 			if(this->parqueoTD[pisoElg][i][j] == NULL){
 				this->parqueoTD[pisoElg][i][j] = new Carro(colorC, marcaC, alturaC);
+				//this->parqueoTD[pisoElg][i][j] = temp;
+				//*parqueoTD[pisoElg][i][j] = temp;
 				cout<<"Se ha estacionado el auto"<< endl;
-				//i = pisos;
-				//j = n;
+				i = pisos;
+				j = n;
 				break;
 		
 			}

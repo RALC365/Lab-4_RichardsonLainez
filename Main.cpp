@@ -35,27 +35,32 @@ int main(){
 
 	int opcion = 0;
  	opcion = menu();
+	char resp = 's';
+	do{
+		switch(opcion){
+			case 1:
+				edificio.getParqueo().anadirCarro();
+				break;
 
-	switch(opcion){
-		case 1:
-			edificio.getParqueo().anadirCarro();
-			break;
+			case 2:
+				edificio.getParqueo().eliminarCarro();
+				break;
 
-		case 2:
-			edificio.getParqueo().eliminarCarro();
-			break;
+			case 3:
+				edificio.getParqueo().analizarParqueo();
+				break;
 
-		case 3:
-			edificio.getParqueo().analizarParqueo();
-			break;
-
-		case 4: 
-			cout << "¡Que tenga un excelent dia!" << endl;
-			break;
-
-
-	}
-
+			case 4: 
+				cout << "¡Que tenga un excelent dia!" << endl;
+				break;
+		}
+		if(opcion != 4){
+			cout<<"Desea continuar (s/S)"<< endl;
+			cin >>  resp;
+		}else{
+			resp = 'd';
+		}
+	}while(resp == 's' || resp == 'S');
 
 
 	return 0;
